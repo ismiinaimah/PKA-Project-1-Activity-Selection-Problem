@@ -86,7 +86,7 @@ _**Program 1** dan **Program 2** sudah terlampir di atas dan dapat di akses mela
 
 ## Batasan
 - Pada program ini tidak memperhitungkan kemungkinan penjadwalan ulang rapat yang tidak terselenggara karena bertabrakan dengan rapat lain.
-- Pendekatan algoritma greedy berdasrakan waktu selesai rapat dan tidak mempertimbangkan prioritas komite dan topiknya.
+- Pendekatan algoritma greedy berdasarkan waktu selesai rapat dan tidak mempertimbangkan prioritas komite dan topiknya.
 
 ## Credit
 Ismi Nurul Na'imah  
