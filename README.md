@@ -38,7 +38,7 @@ Program ini menyediakan 2 alternatif input yang dapat dieksekusi
 - Program 1: Input berupa file CSV yang berisi 50 data jadwal rapat komite.
 - Program 2: Input manual berupa jumlah rapat yang akan dilaksanakan beserta informasi untuk setiap rapat.
 ### Input  Program 1
-File CSV yang memiliki kolom berikut:
+File CSV yang memiliki atribut sebagai berikut:
 - **Name**: Nama komite yang menyelenggarakan rapat.
 - **Date**: Tanggal rapat dalam format YYYY-MM-DD.
 - **Start**: Waktu mulai rapat dalam format HH:MM.
