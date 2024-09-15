@@ -15,8 +15,8 @@
 - Ruang rapat: Terbatas, hanya ada satu ruang rapat yang tersedia.
 - Tujuan optimasi: Memaksimalkan jumlah rapat yang dapat diselenggarakan tanpa ada yang bertabrakan sehingga penggunaan ruang rapat lebih efisien.
 
-Pada kasus ini terdapat 50 jadwal rapat, _S = {1,2,3,...,50}_ yang akan menggunakan suatu ruang rapat dimana hanya dapat digunakan untuk satu rapat saja di waktu tertentu.
-Setiap rapat _i_ memiliki waktu mulai _s i_ dan waktu selesai _f i_ , dimana _s i_ &le; _f i_ . Dua aktifitas _i_ dan _j_ dikatakan **kompatibel** jika interval [_s i_ , _f i_] dan [_s j_ , _f j_] tidak bertabrakan.
+Pada kasus ini terdapat 50 jadwal rapat, _S = {rapat1,rapat2,rapat3,...,rapat50}_ yang akan menggunakan suatu ruang rapat dimana hanya dapat digunakan untuk satu rapat saja di waktu tertentu.
+Setiap rapat _i_ memiliki waktu mulai _s i_ dan waktu selesai _f i_ , dimana _s i_ &le; _f i_ . Dua aktifitas _i_ dan _j_ dikatakan **kompatibel** jika interval [_s i_ , _f i_] dan [_s j_ , _f j_] tidak beririsan/bertabrakan.
 
 ## Pendekatan Algoritma Greedy
 Algoritma greedy digunakan pada kasus ini karena mudah dipahami dan diimplemetasikan. Pada setiap langkahnya dipilih solusi lokal yang terbaik (memilih rapat dengan waktu selesai terawal). Dalam permasalahan pemilihan kegiatan seperti penjadwalan, solusi lokal tersebut akan membantu mencapai solusi keseluruhan yang cukup optimal, yaitu memaksimalkan jumlah rapat tanpa bertabrakan. 
@@ -33,7 +33,7 @@ Sebelum menjalankan program, pastikan bahwa:
 - Library **pandas** untuk membaca file CSV.
 - Library **datetime** untuk memproses data waktu.
 
-## Input dan Output
+## Input dan Output Program
 Program ini menyediakan 2 alternatif input yang dapat dieksekusi
 - Program 1: Input berupa file CSV yang berisi 50 data jadwal rapat komite.
 - Program 2: Input manual berupa jumlah rapat yang akan dilaksanakan beserta informasi untuk setiap rapat.
