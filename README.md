@@ -7,19 +7,21 @@
 [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TtfkD6nXbrkMWukomyyFJCvBl38JIR1G?usp=sharing)
 
 ## Deskripsi
- Dalam satu bulan sejumlah komite dewan akan melaksanakan rapat yang dilaksanakan di tempat yang sama yaitu ruang pertemuan komite dewan. Setiap komite dewan memiliki data yang mencakup tanggal pelaksanaan rapat, waktu mulai rapat, waktu selesai rapat dan topik pembahasan rapat. Beberapa komite dewan memiliki jadwal yang bertabrakan, sehingga untuk menanggulanginya program ini dirancang untuk membantu mengoptimalkan penjadwalan rapat dengan pendekatan algoritma greedy.
+ Dalam satu bulan sejumlah komite dewan akan melaksanakan rapat yang dilaksanakan di tempat yang sama yaitu ruang pertemuan komite dewan. Setiap komite dewan memiliki data yang mencakup _tanggal pelaksanaan rapat_, _waktu mulai rapat_, _waktu selesai rapat_ dan _topik pembahasan rapat_. Beberapa komite dewan memiliki jadwal yang bertabrakan, sehingga untuk menanggulanginya program ini dirancang untuk membantu mengoptimalkan penjadwalan rapat dengan pendekatan algoritma greedy.
  
 ## Representasi Ruang Keadaan
-- Komite dewan: Setiap komite memiliki satu atau lebih jadwal rapat dalam satu bulan dengan hari dan jam tertentu.
-- Waktu mulai dan selesai rapat: Setiap rapat memiliki waktu tersendiri yang sudah jelas dan tidak boleh bertabrakan dengan rapat lain di hari yang sama.
-- Ruang rapat: Terbatas, hanya ada satu ruang rapat yang tersedia.
-- Tujuan optimasi: Memaksimalkan jumlah rapat yang dapat diselenggarakan tanpa ada yang bertabrakan sehingga penggunaan ruang rapat lebih efisien.
-
-Pada kasus ini terdapat 50 jadwal rapat, _S = {rapat1,rapat2,rapat3,...,rapat50}_ yang akan menggunakan suatu ruang rapat dimana hanya dapat digunakan untuk satu rapat saja di waktu tertentu.
-Setiap rapat _i_ memiliki waktu mulai _s i_ dan waktu selesai _f i_ , dimana _s i_ &le; _f i_ . Dua aktifitas _i_ dan _j_ dikatakan **kompatibel** jika interval [_s i_ , _f i_] dan [_s j_ , _f j_] tidak beririsan/bertabrakan.
+- **Ruang keadaan**: Semua kemungkinan konfigurasi jadwal rapat yang dapat terjadi selama satu bulan.
+- **Keadaan awal**: Semua jadwal rapat dalam satu bulan yang diinginkan oleh setiap komite (termasuk jadwal yang bertabrakan).
+- **Keadaan tujuan**: Konfigurasi jadwal rapat yang optimal, yaitu memaksimalkan jadwal rapat yang kompatibel, sehingga penggunaan ruang rapat lebih efisien.
+- **Operator/Tindakan**: Menentukan rapat yang akan dijadwalkan berdasarkan pada beberapa kriteria/kondisi (pendekatan algoritma greedy).
+    - **Kriteria**: Rapat ke _i_ dan ke _j_ dianggap **kompatibel** jika interval [_s i_ , _f i_] dan [_s j_ , _f j_] tidak beririsan/bertabrakan.
+    - **Tindakan**: Jadwal rapat diurutkan berdar waktu selesai terawal, pada setiap langkah pilih jadwal yang mulainya lebih besar atau sama dengan waktu selesai rapat yang sudah dipilih sebelumnya.
+- **Batasan**: Penjadwalan ulang rapat yang tidak terselenggara karena bertabrakan dengan rapat lain tidak diperhitungkan, pendekatan algoritma greedy berdasarkan waktu selesai rapat, tidak mempertimbangkan prioritas komite dan topik.
+- **Solusi**: Urutan rapat yang dapat dijadwalkan secara optimal berdasarkan kriteria greedy.
 
 ## Pendekatan Algoritma Greedy
-Algoritma greedy digunakan pada kasus ini karena mudah dipahami dan diimplemetasikan. Pada setiap langkahnya dipilih solusi lokal yang terbaik (memilih rapat dengan waktu selesai terawal). Dalam permasalahan pemilihan kegiatan seperti penjadwalan, solusi lokal tersebut akan membantu mencapai solusi keseluruhan yang cukup optimal, yaitu memaksimalkan jumlah rapat tanpa bertabrakan. 
+- Algoritma greedy digunakan pada kasus ini karena mudah dipahami dan diimplemetasikan. 
+- Pada setiap langkahnya dipilih solusi lokal yang terbaik (memilih rapat dengan waktu selesai terawal). Dalam permasalahan pemilihan kegiatan seperti penjadwalan, solusi lokal tersebut akan membantu mencapai solusi keseluruhan yang cukup optimal, yaitu memaksimalkan jumlah rapat tanpa bertabrakan. 
 
 ## Fitur
 - Input CSV: Program membaca input file CSV yang memuat informasi rapat (nama komite, tanggal, waktu mulai, waktu selesai, dan topik). ----> **Program 1**
@@ -83,10 +85,6 @@ Hasil output untuk program 1 dan 2 sama yaitu berupa hasil jadwal yang dioptimal
 5. Lihat hasil outputnya: Program akan menampilkan hasil jadwal yang tidak bertabrakan.
 
 _**Program 1** dan **Program 2** sudah terlampir di atas dan dapat di akses melalui Google Colab_
-
-## Batasan
-- Pada program ini tidak memperhitungkan kemungkinan penjadwalan ulang rapat yang tidak terselenggara karena bertabrakan dengan rapat lain.
-- Pendekatan algoritma greedy berdasarkan waktu selesai rapat dan tidak mempertimbangkan prioritas komite dan topiknya.
 
 ## Credit
 Ismi Nurul Na'imah  
