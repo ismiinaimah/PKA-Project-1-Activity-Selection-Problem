@@ -7,7 +7,7 @@
 [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TtfkD6nXbrkMWukomyyFJCvBl38JIR1G?usp=sharing)
 
 ## Deskripsi
- Dalam satu bulan sejumlah komite dewan akan melaksanakan rapat yang dilaksanakan di tempat yang sama yaitu ruang pertemuan komite dewan. Setiap komite dewan memiliki data yang mencakup _tanggal pelaksanaan rapat_, _waktu mulai rapat_, _waktu selesai rapat_ dan _topik pembahasan rapat_. Beberapa komite dewan memiliki jadwal yang bertabrakan, sehingga untuk menanggulanginya program ini dirancang untuk membantu mengoptimalkan penjadwalan rapat dengan pendekatan algoritma greedy.
+ Dalam satu bulan sejumlah komite dewan akan melaksanakan rapat yang dilaksanakan di tempat yang sama yaitu ruang pertemuan komite dewan. Setiap komite dewan memiliki data yang mencakup _tanggal_ pelaksanaan rapat, _waktu mulai_ rapat, _waktu selesai_ rapat dan _topik_ pembahasan rapat. Beberapa komite dewan memiliki jadwal yang bertabrakan, sehingga untuk menanggulanginya program ini dirancang untuk membantu mengoptimalkan penjadwalan rapat dengan pendekatan algoritma greedy.
  
 ## Representasi Ruang Keadaan
 - **Ruang keadaan**: Semua kemungkinan konfigurasi jadwal rapat yang dapat terjadi selama satu bulan.
